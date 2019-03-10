@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Death-API", "Death-API\Death-API.csproj", "{4572708B-CA61-4361-B475-B234BE7E18B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Death-Web", "..\Death-Web\Death-Web.csproj", "{980081E0-F284-424B-A593-B81FE14E56B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4572708B-CA61-4361-B475-B234BE7E18B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4572708B-CA61-4361-B475-B234BE7E18B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4572708B-CA61-4361-B475-B234BE7E18B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4572708B-CA61-4361-B475-B234BE7E18B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{980081E0-F284-424B-A593-B81FE14E56B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{980081E0-F284-424B-A593-B81FE14E56B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{980081E0-F284-424B-A593-B81FE14E56B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{980081E0-F284-424B-A593-B81FE14E56B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9D2AA4C-BA9A-4EAB-B291-4CE81826A860}
+	EndGlobalSection
+EndGlobal

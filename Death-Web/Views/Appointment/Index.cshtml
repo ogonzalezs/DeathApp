@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Death_Web.Models.AppointmentWeb>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+    <a href="@Url.Action("AddOrEdit", "Appointment")" class="btn btn-default"><i class="fa fa-plus"></i>Crear</a>
+</p>
+<table class="table">
+    <thead class="table-heading">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdAppointment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AppointmentDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Note)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdAppointment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppointmentDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Note)
+            </td>
+            <td>
+                <a href="@Url.Action("AddOrEdit", "Appointment", new {  id=item.IdAppointment })" class="btn btn-default"><i class="fa fa-pencil"></i>Editar</a>
+                <a onclick="Delete(@item.IdAppointment)" class="btn btn-default"><i class="fa-trash"></i>Borrar</a>
+            </td>
+        </tr>
+    }
+</table>
+@section scripts{
+    <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]'
+            if (successMessage != '')
+                alertify.success(successMessage);
+        });
+
+        function Delete(id) {
+            alertify.confirm('Appointments Death', 'Esta seguro de borrar el registro?', function () {
+                window.location.href = '@Url.Action("Delete","Appointment")/' + id;
+            }, null);
+        }
+    </script>
+}
